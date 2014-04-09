@@ -7,9 +7,9 @@ class PlayersController < ApplicationController
 
 	def firstteam
 		if params[:position]
-			@fplayers = Player.where("position = ?", params[:position])
+			@fplayers = Player.where("position = ?", params[:position]).sort_by{|p| p.squadno}
 		else
-			@fplayers = Player.all
+			@fplayers = Player.all.sort_by {|p| p.squadno}
 		end
 		respond_with(@fplayers)
 	end
