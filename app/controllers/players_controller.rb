@@ -6,9 +6,12 @@ class PlayersController < ApplicationController
 	end
 
 	def firstteam
-		@players = Player.all
-		respond_with(@players)
-		# render json: @players
+		if params[:position]
+			@fplayers = Player.where("position = ?", params[:position])
+		else
+			@fplayers = Player.all
+		end
+		respond_with(@fplayers)
 	end
 
 	def new 
