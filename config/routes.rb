@@ -1,4 +1,10 @@
 UnitedServer::Application.routes.draw do
+
+  root 'players#index'
+  get 'players/firstteam', to: 'players#firstteam'
+  resources :players
+
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

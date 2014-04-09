@@ -1,0 +1,9 @@
+<%= form_for @player, html: {multipart: true} do |f| %>
+	<%= f.text_field :name, placeholder: "Name" %><br>
+	<%= f.text_field :team, placeholder: "Team" %><br>
+	<%= f.text_field :wiki, placeholder: "Wiki" %><br>
+	<%= f.text_field :dob, placeholder: "DOB" %><br>
+	<%= f.text_field :squadno, placeholder: "Squad Number" %><br>
+	<%= f.text_field :position, placeholder: "Position" %><br>
+	<%= f.submit('Add') %>
+<% end %> 

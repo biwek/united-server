@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  team: MyString
+  wiki: MyString
+  dob: 2014-04-08
+  squadno: 1
+
+two:
+  name: MyString
+  team: MyString
+  wiki: MyString
+  dob: 2014-04-08
+  squadno: 1
