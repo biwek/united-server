@@ -1,4 +1,4 @@
 <a href="<%=new_player_path%>"> New Player </a> <br>
 
-<a href="<%=players_firstteam_path%>">First Team</a><br>
-<a>Under 21s</a>
+<%= link_to "First Team", players_team_path(team: "First Team") %> <br>
+<%= link_to "Under 21s", players_team_path(team: "Under 21s") %>

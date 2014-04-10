@@ -5,13 +5,16 @@ class PlayersController < ApplicationController
 	def index
 	end
 
-	def firstteam
-		if params[:position]
-			@fplayers = Player.where("position = ?", params[:position]).sort_by{|p| p.squadno}
+	def team
+		if params[:team]
+			@fplayers = Player.where("team = ?", params[:team]).sort_by{|p| p.squadno}
 		else
 			@fplayers = Player.all.sort_by {|p| p.squadno}
 		end
 		respond_with(@fplayers)
+	end
+
+	def underteam
 	end
 
 	def new 

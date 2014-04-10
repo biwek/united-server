@@ -1,7 +1,7 @@
 UnitedServer::Application.routes.draw do
 
   root 'players#index'
-  get 'players/firstteam', to: 'players#firstteam'
+  get 'players/team', to: 'players#team'
   resources :players
 
  
